@@ -22,7 +22,7 @@
             <button type="button">Поиск по сайту</button>
           </li>
           <li class="main-navigation__item">
-            <a href="basket.html">Корзина: пока пуста</a>
+            <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -63,17 +63,6 @@
         <img class="promotion__image" src="placeholder.img" width="260" height="315" alt="Вязаные корзинки">
         <b class="promotion__price">Цена: 990 руб.</b>
         <button class="button promotion__button--order" type="button" aria-label="Заказать акционный товар">Заказать</button>
-        <form class="promotion__modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
-          <h3>Добавить в корзину</h3>
-          <p>Выберите размер:</p>
-          <label for="size-1">S</label>
-          <input id="size-1" type="checkbox" name="size-s" value="s" checked>
-          <label for="size-2">M</label>
-          <input id="size-2" type="checkbox" name="size-m" value="m">
-          <label for="size-3">L</label>
-          <input id="size-3" type="checkbox" name="size-l" value="l">
-          <button type="button" class="button promotion__button--add-size" aria-label="Добавить размер в корзину">Добавить</button>
-        </form>
       </section>
       <section class="page-main__features features">
         <h2 class="features__header">Коротко о нас:</h2>
@@ -100,14 +89,16 @@
       </section>
       <section class="page-main__comments comments">
         <h2 class="comments__header">Отзывы</h2>
-        <p class="comments__text">
-          Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
-          как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
-          и мои фотографии сразу стали более стильными, а также набирают больше лайков!
-        </p>
-        <div class="comments__user user">
-          <p class="user__name">Анастасия Красильникова</p>
-          <span class="user__nickname">@misssssiskras</span>
+        <div class="comments__container">
+          <p class="comments__text">
+            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+            как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+            и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+          </p>
+          <div class="comments__user user">
+            <p class="user__name">Анастасия Красильникова</p>
+            <span class="user__nickname">@misssssiskras</span>
+          </div>
         </div>
         <button class="comments__button comments__button--prev" aria-label="Предыдущий комментарий">Назад</button>
         <button class="comments__button comments__button--next" aria-label="Следующий комментарий">Вперед</button>
@@ -123,9 +114,12 @@
         </p>
       </section>
       <section class="page-main__map map">
+        <h2 class="visually-hidden">Как до нас добраться?</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="322" height="457" allowfullscreen></iframe>
         <img src="map.img" width="322" height="457" alt="Наше расположение на карте">
       </section>
       <section class="page-main__feedback feedback">
+        <h2 class="visually-hidden">Обратная связь</h2>
         <a class="button feedback__button-write" href="feedback-form.html">Напишите нам</a>
       </section>
     </main>
@@ -148,5 +142,16 @@
         </a>
       </p>
     </footer>
+    <form class="promotion__modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
+      <h3>Добавить в корзину</h3>
+      <p>Выберите размер:</p>
+      <label for="size-1">S</label>
+      <input id="size-1" type="checkbox" name="size-s" value="s" checked>
+      <label for="size-2">M</label>
+      <input id="size-2" type="checkbox" name="size-m" value="m">
+      <label for="size-3">L</label>
+      <input id="size-3" type="checkbox" name="size-l" value="l">
+      <button type="button" class="button promotion__button--add-size" aria-label="Добавить размер в корзину">Добавить</button>
+    </form>
   </body>
 </html>

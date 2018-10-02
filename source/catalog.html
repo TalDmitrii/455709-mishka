@@ -24,7 +24,7 @@
             <button type="button">Поиск по сайту</button>
           </li>
           <li class="main-navigation__item">
-            <a href="basket.html">Корзина: пока пуста</a>
+            <a href="#">Корзина: пока пуста</a>
           </li>
         </ul>
       </nav>
@@ -39,12 +39,13 @@
           <a href="catalog-item-rabbit.html">
             <img src="img.img" width="260" height="195" alt="img">
           </a>
-          <p class="catalog-list__description">
+          <div class="catalog-list__description">
             Рост 30 см, вес 200 г
-          </p>
+          </div>
           <b class="catalog-list__price">
             1 200 руб.
           </b>
+          <button class="catalog-list__button">Добавить в корзину</button>
         </li>
         <li class="catalog-list__item">
           <h2 class="catalog-list__header">
@@ -53,12 +54,13 @@
           <a href="catalog-item-basket1.html">
             <img src="img.img" width="260" height="195" alt="img">
           </a>
-          <p class="catalog-list__description">
+          <div class="catalog-list__description">
             Диаметр 15 см, высота 10 см
-          </p>
+          </div>
           <b class="catalog-list__price">
             690 руб.
           </b>
+          <button class="catalog-list__button">Добавить в корзину</button>
         </li>
         <li class="catalog-list__item">
           <h2 class="catalog-list__header">
@@ -67,25 +69,15 @@
           <a href="catalog-item-basket2.html">
             <img src="img.img" width="260" height="195" alt="img">
           </a>
-          <p class="catalog-list__description">
+          <div class="catalog-list__description">
             Диаметр 30 см, высота 30 см
-          </p>
+          </div>
           <b class="catalog-list__price">
             1 500 руб.
           </b>
+          <button class="catalog-list__button">Добавить в корзину</button>
         </li>
       </ul>
-      <form class="catalog-list__modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
-        <h3>Добавить в корзину</h3>
-        <p>Выберите размер:</p>
-        <label for="size-1">S</label>
-        <input id="size-1" type="checkbox" name="size" value="s" checked>
-        <label for="size-2">M</label>
-        <input id="size-2" type="checkbox" name="size" value="m">
-        <label for="size-3">L</label>
-        <input id="size-3" type="checkbox" name="size" value="l">
-        <button type="button" class="button promotion__button--add-size" aria-label="Добавить размер в корзину">Добавить</button>
-      </form>
       <section class="catalog-page__production production">
         <h2 class="production__header">Процесс производства</h2>
         <video class="visually-hidden" controls preload="metadata" width="260" height="150"></video>
@@ -116,5 +108,16 @@
         </a>
       </p>
     </footer>
+    <form class="catalog-list__modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
+      <h3>Добавить в корзину</h3>
+      <p>Выберите размер:</p>
+      <label for="size-1">S</label>
+      <input id="size-1" type="checkbox" name="size" value="s" checked>
+      <label for="size-2">M</label>
+      <input id="size-2" type="checkbox" name="size" value="m">
+      <label for="size-3">L</label>
+      <input id="size-3" type="checkbox" name="size" value="l">
+      <button class="button promotion__button--add-size" type="button" aria-label="Добавить размер в корзину">Добавить</button>
+    </form>
   </body>
 </html>
