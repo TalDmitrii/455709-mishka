@@ -33,10 +33,10 @@
         <h2 class="visually-hidden">Наша продукция</h2>
         <ul class="products__list">
           <li class="products__item">
-            <a class="products__interior" href="catalog-interior.html">Предметы интерьера</a>
+            <a class="products__interior" href="#">Предметы интерьера</a>
           </li>
           <li class="products__item">
-            <a class="products__toys" href="catalog-toys.html">Детские игрушки</a>
+            <a class="products__toys" href="#">Детские игрушки</a>
           </li>
         </ul>
       </section>
@@ -96,18 +96,18 @@
             и мои фотографии сразу стали более стильными, а также набирают больше лайков!
           </p>
           <div class="comments__user user">
-            <p class="user__name">Анастасия Красильникова</p>
+            <b class="user__name">Анастасия Красильникова</b>
             <span class="user__nickname">@misssssiskras</span>
           </div>
         </div>
         <button class="comments__button comments__button--prev" aria-label="Предыдущий комментарий">Назад</button>
         <button class="comments__button comments__button--next" aria-label="Следующий комментарий">Вперед</button>
-        <a class="button comments__button-write" href="comments.html">Написать</a>
+        <a class="button comments__button-write" href="#">Написать</a>
       </section>
       <section class="page-main__contacts contacts">
         <h2 class="contacts__header">Контакты</h2>
         <p class="contacts__email">
-          e-mail: info@mimimishkashop.ru
+          e-mail: <span class="contacts__link">info@mimimishkashop.ru</span>
         </p>
         <p class="contacts__adress">
           адрес: г. Санкт-Петербург,<br> ул. Большая<br> Конюшенная,<br> д. 19/8, офис 101
@@ -120,7 +120,7 @@
       </section>
       <section class="page-main__feedback feedback">
         <h2 class="visually-hidden">Обратная связь</h2>
-        <a class="button feedback__button-write" href="feedback-form.html">Напишите нам</a>
+        <a class="button feedback__button-write" href="#">Напишите нам</a>
       </section>
     </main>
     <footer class="page-footer">
@@ -135,16 +135,16 @@
           <a href="https://twitter.com/htmlacademy_ru">Мы в Твиттер</a>
         </li>
       </ul>
-      <p class="page-footer__producer">
+      <div class="page-footer__producer">
         Разработано
         <a href="https://htmlacademy.ru/intensive/adaptive">
           <img src="img.img" width="27" height="34" alt="Логотип HTML Academy">
         </a>
-      </p>
+      </div>
     </footer>
     <form class="promotion__modal modal-basket" action="https://echo.htmlacademy.ru" method="post">
       <h3>Добавить в корзину</h3>
-      <p>Выберите размер:</p>
+      <span>Выберите размер:</span>
       <label for="size-1">S</label>
       <input id="size-1" type="checkbox" name="size-s" value="s" checked>
       <label for="size-2">M</label>
