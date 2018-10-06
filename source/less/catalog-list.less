@@ -31,3 +31,20 @@
   font-size: 15px;
   line-height: 24px;
 }
+
+@media (min-width: @tablet-width) {
+  .catalog-list__item {
+    display: flex;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .catalog-list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .catalog-list__item {
+    flex-direction: column;
+  }
+}

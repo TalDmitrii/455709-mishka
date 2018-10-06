@@ -23,3 +23,26 @@
 .comments__button-write {
   text-decoration: none;
 }
+
+@media (min-width: @tablet-width) {
+  .comments {
+    position: relative;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+  }
+
+  .comments__wrapper {
+    display: flex;
+  }
+
+  .comments__button-wrapper {
+    margin-left: auto;
+  }
+
+  .comments__button-write {
+    position: absolute;
+    top: 30px;
+    right: 0;
+  }
+}

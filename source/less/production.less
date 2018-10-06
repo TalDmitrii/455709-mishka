@@ -25,3 +25,38 @@
 
   text-decoration: none;
 }
+
+@media (min-width: @tablet-width) {
+  .production__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .production img {
+    width: 608px;
+    height: 455px;
+    order: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    display: flex;
+    position: relative;
+    min-height: 400px;
+  }
+
+  .production__wrapper {
+    width: 367px;
+
+    margin-left: auto;
+  }
+
+  .production img {
+    width: 600px;
+    height: 430px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

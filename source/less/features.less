@@ -23,3 +23,18 @@
 .features__item {
   line-height: 20px;
 }
+
+@media (min-width: @tablet-width) {
+  .features__wrapper {
+    display: flex;
+  }
+
+  .features__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .features__item {
+    width: 300px;
+  }
+}
