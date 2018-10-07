@@ -5,6 +5,7 @@
   padding-bottom: 36px;
   padding-left: 30px;
 
+  background-color: #ffffff;
   border: 1px solid red;
 }
 
@@ -19,4 +20,44 @@
   line-height: 20px;
   color: @green-color;
   text-transform: uppercase;
+}
+
+.promotion__price-wrapper {
+  width: 259px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .promotion {
+    /// Временно ///
+    min-height: 325px;
+    position: relative;
+  }
+
+  .promotion__header-wrapper {
+    display: flex;
+  }
+
+  .promotion__type {
+    margin-left: auto;
+  }
+
+  .promotion__description {
+    width: 285px;
+  }
+
+  .promotion__image {
+    position: absolute;
+    top: 80px;
+    right: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promotion__type {
+    order: -1;
+    margin-left: 47px;
+    margin-right: 58px;
+  }
 }

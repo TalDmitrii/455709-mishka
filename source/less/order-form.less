@@ -3,7 +3,12 @@
   line-height: 18px;
 }
 
-.order-form fieldset {
+.order-form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form__field {
   margin: 0;
   padding: 0;
 
@@ -17,4 +22,43 @@
   text-transform: uppercase;
 
   padding: 0;
+}
+
+.order-form__field--name label,
+.order-form__field--contacts label,
+.order-form__field--add label {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-form__tip-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: @tablet-width) {
+  .order-form__field {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .order-form__wrapper--color {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .order-form__wrapper--color label {
+    width: 250px;
+  }
+
+  .order-form__field--name label,
+  .order-form__field--contacts label,
+  .order-form__field--add label {
+    flex-direction: row;
+  }
+
+  .order-form__tip-wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
 }

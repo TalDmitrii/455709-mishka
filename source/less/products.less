@@ -9,6 +9,22 @@
   padding: 0;
 }
 
+@media (min-width: @tablet-width) {
+  .products__list {
+    display: flex;
+  }
+
+  .products__item {
+    width: 334px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .products__item {
+    width: 525px;
+  }
+}
+
 .products__item a {
   min-height: 103px;
   width: 100%;
