@@ -3,13 +3,23 @@
   line-height: 18px;
 }
 
+.order-form input {
+  margin: 0;
+  padding: 0;
+}
+
 .order-form__wrapper {
   display: flex;
   flex-direction: column;
 }
 
+.order-form__label {
+  display: block;
+}
+
 .order-form__field {
   margin: 0;
+  margin-bottom: 34px;
   padding: 0;
 
   border: none;
@@ -24,6 +34,212 @@
   padding: 0;
 }
 
+.order-form__label--type {
+  margin-bottom: 27px;
+}
+
+.order-form__label-type {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  margin-bottom: 14px;
+  padding-top: 11px;
+  padding-left: 62px;
+
+  &::before {
+    width: 36px;
+    height: 36px;
+    content: "";
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    border: 2px solid @grey-color;
+    border-radius: 50%;
+  }
+
+  &:hover::before {
+    border-color: @green-color;
+  }
+
+  &:active::before {
+    border-color: fade(@grey-color, 30%);
+  }
+}
+
+.order-form__type-1:checked ~ .order-form__label-type--1::before,
+.order-form__type-2:checked ~ .order-form__label-type--2::before {
+  box-shadow: inset 0 0 0 10px #ffffff, inset 0 0 0 18px @green-color;
+}
+
+.order-form__label-type input {
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.order-form__label--color {
+  margin-bottom: 23px;
+}
+
+.order-form__label-color {
+  position: relative;
+
+  margin-bottom: 22px;
+  padding-top: 11px;
+  padding-bottom: 10px;
+  padding-left: 64px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::before {
+    width: 36px;
+    height: 35px;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    border: 2px solid @grey-color;
+  }
+
+  &:hover::before {
+    border-color: @green-color;
+  }
+
+  &:active::before {
+    border-color: fade(@grey-color, 30%);
+  }
+
+  &::after {
+    width: 22px;
+    height: 16px;
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 9px;
+  }
+}
+
+.order-form__color-1:checked ~ .order-form__label-color-1::after,
+.order-form__color-2:checked ~ .order-form__label-color-2::after,
+.order-form__color-3:checked ~ .order-form__label-color-3::after,
+.order-form__color-4:checked ~ .order-form__label-color-4::after,
+.order-form__color-5:checked ~ .order-form__label-color-5::after,
+.order-form__color-6:checked ~ .order-form__label-color-6::after {
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.order-form__label--name {
+  margin-bottom: 32px;
+}
+
+.order-form__field--name input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+
+  padding-top: 18px;
+  padding-bottom: 17px;
+
+  border: none;
+  box-shadow: inset 0 -2px 0 #000000;
+}
+
+.order-form__field--name input:hover,
+.order-form__field--name input:focus,
+.order-form__field--name input:active {
+  box-shadow: inset 0 -2px 0 @green-color;
+}
+
+.order-form__field--name input:active {
+  box-shadow: inset 0 -3px 0 @green-color;
+}
+
+.order-form__field--name label:not(:last-child) {
+  margin-bottom: 22px;
+}
+
+.order-form__field--contacts input {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+
+  padding-top: 18px;
+  padding-bottom: 20px;
+
+  border: none;
+  box-shadow: inset 0 -2px 0 #000000;
+}
+
+.order-form__field--contacts input:hover,
+.order-form__field--contacts input:focus {
+  box-shadow: inset 0 -2px 0 @green-color;
+}
+
+.order-form__field--contacts input:active {
+  box-shadow: inset 0 -3px 0 @green-color;
+}
+
+input.order-form__input-tel {
+  font-size: 19px;
+  line-height: 19px;
+
+  padding-top: 16px;
+  padding-bottom: 21px;
+}
+
+.order-form__label-tel {
+  position: relative;
+
+  margin-bottom: 33px;
+}
+
+.order-form__label-tel svg {
+  position: absolute;
+  top: 32px;
+  right: 8px;
+}
+
+.order-form__label-tel path {
+  fill: fade(#000000, 20%);
+}
+
+.order-form__label-tel:hover path {
+  fill: @green-color;
+}
+
+.order-form__label-tel:focus path {
+  fill: @green-color;
+}
+
+.order-form__label-mail {
+  position: relative;
+}
+
+.order-form__label-mail svg {
+  position: absolute;
+  top: 27px;
+  right: 4px;
+}
+
+.order-form__label-mail path {
+  fill: fade(#000000, 20%);
+}
+
+.order-form__label-mail:hover path {
+  fill: @green-color;
+}
+
 .order-form__field--name label,
 .order-form__field--contacts label,
 .order-form__field--add label {
@@ -31,9 +247,58 @@
   flex-direction: column;
 }
 
+.order-form__field--add {
+  margin-bottom: 17px;
+}
+
+.order-form__field--add .order-form__label {
+  margin-bottom: 23px;
+}
+
+.order-form__field--add textarea {
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 400;
+  color: @grey-color;
+
+  padding-top: 16px;
+  padding-left: 15px;
+
+  border: 2px solid @grey-color;
+}
+
+.order-form__field--add textarea:hover,
+.order-form__field--add textarea:focus {
+  border-color: @green-color;
+}
+
+.order-form input::-webkit-input-placeholder {
+  color: fade(@grey-color, 30%);
+}
+.order-form input:-moz-placeholder {
+  color: fade(@grey-color, 30%);
+}
+
+.order-form textarea::-webkit-input-placeholder {
+  color: fade(@grey-color, 30%);
+}
+.order-form textarea:-moz-placeholder {
+  color: fade(@grey-color, 30%);
+}
+
 .order-form__tip-wrapper {
   display: flex;
   flex-direction: column;
+}
+
+.order-form__tip {
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 400;
+  color: @grey-color;
+
+  margin-bottom: 30px;
 }
 
 @media (min-width: @tablet-width) {
@@ -60,5 +325,26 @@
   .order-form__tip-wrapper {
     flex-direction: row-reverse;
     justify-content: space-between;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .order-form__label {
+    position: relative;
+
+    &::after {
+      width: 198px;
+      height: 1px;
+      content: "";
+      position: absolute;
+      top: 8px;
+      right: 0;
+
+      background-color: @green-color;
+    }
+  }
+
+  .order-form__label--email::after {
+    width: 179px;
   }
 }

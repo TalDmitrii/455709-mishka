@@ -3,10 +3,25 @@
 @cream-color: #f1f1f1;
 @tablet-width: 768px;
 @desktop-width: 1150px;
+@mobile-width-only: 768px;
 
 .heading() {
   font-size: 25px;
   line-height: 30px;
+}
+
+@font-face {
+  font-weight: normal;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensans.woff2") format("woff2"), url("../fonts/opensans.woff") format("woff");
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: "Open Sans";
+  font-style: normal;
+  src: url("../fonts/opensansbold.woff2") format("woff2"), url("../fonts/opensansbold.woff") format("woff");
 }
 
 .visually-hidden {

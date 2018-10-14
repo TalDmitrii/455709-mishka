@@ -3,8 +3,32 @@
 
   margin: 0;
   padding: 30px;
+  padding-bottom: 0;
+}
 
-  border: 1px solid red;
+.catalog-list__item {
+  margin-bottom: 30px;
+}
+
+.catalog-list__wrapper {
+  position: relative;
+
+  padding-top: 24px;
+  padding-left: 27px;
+
+  border: 1px solid #ececec;
+}
+
+.catalog-list__item:hover .catalog-list__wrapper {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-list__image:focus ~ .catalog-list__wrapper {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-list__image:active ~ .catalog-list__wrapper {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .catalog-list__header {
@@ -12,7 +36,24 @@
   padding: 0;
 }
 
+.catalog-list__header a:hover,
+.catalog-list__header a:focus {
+  color: fade(#000000, 60%);
+}
+
+.catalog-list__header a:active {
+  color: fade(#000000, 30%);
+}
+
+.catalog-list__image {
+  height: 195px;
+  display: block;
+}
+
 .catalog-list__header a {
+  display:inline-block;
+  vertical-align: baseline;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
@@ -22,14 +63,63 @@
 }
 
 .catalog-list__description {
+  position: relative;
+
   font-size: 13px;
   line-height: 30px;
   font-weight: 400;
+
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+
+  &::after {
+    width: 204px;
+    height: 1px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    background-color: #ececec;
+  }
 }
 
 .catalog-list__price {
+  display: inline-block;
+  vertical-align: baseline;
+
   font-size: 15px;
   line-height: 24px;
+
+  margin-bottom: 26px;
+}
+
+.catalog-list__button {
+  width: 20px;
+  height: 19px;
+  display: block;
+  position: absolute;
+  bottom: 32px;
+  right: 27px;
+
+  padding: 0;
+  margin: 0;
+
+  background-color: transparent;
+  border: none;
+}
+
+.catalog-list__button path {
+  fill: fade(#000000, 20%);
+}
+
+.catalog-list__button:hover path,
+.catalog-list__button:focus path {
+  fill: @green-color;
+}
+
+.catalog-list__button:active path {
+  fill: fade(@green-color, 30%);
 }
 
 @media (min-width: @tablet-width) {

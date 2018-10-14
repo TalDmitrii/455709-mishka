@@ -1,10 +1,23 @@
 .comments {
+  position: relative;
+
   padding-top: 27px;
   padding-bottom: 45px;
   padding-left: 30px;
   padding-right: 30px;
+}
 
-  border: 1px solid red;
+.comments::after {
+  width: 100%;
+  height: 6px;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  background-image: url("../img/bg-zigzag-line.svg");
+  background-size: contain;
+  background-position: -6px center;
 }
 
 .comments__header {
@@ -18,6 +31,54 @@
   line-height: 30px;
   font-weight: 400;
   color: @grey-color;
+}
+
+.comments__button-wrapper {
+  display: flex;
+
+  margin-bottom: 38px;
+}
+
+.comments__button {
+  width: 131px;
+  height: 52px;
+  position: relative;
+
+  padding: 0;
+
+  background-color: transparent;
+  border: 1px solid #ececec;
+  box-sizing: border-box;
+}
+
+.comments__button::before {
+  width: 50px;
+  height: 26px;
+  content: "";
+  position: absolute;
+  left: 37px;
+  bottom: 13px;
+}
+
+.comments__button:hover::before,
+.comments__button:focus::before {
+  opacity: 0.6;
+}
+
+.comments__button:active::before {
+  opacity: 0.3;
+}
+
+.comments__button--prev {
+  border-right: none;
+}
+
+.comments__button--prev::before {
+  background-image: url("../img/icon-left-arrow.svg");
+}
+
+.comments__button--next::before {
+  background-image: url("../img/icon-right-arrow.svg");
 }
 
 .comments__button-write {

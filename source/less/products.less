@@ -1,12 +1,82 @@
-.products {
-  border: 1px solid red;
-}
-
 .products__list {
   list-style: none;
 
   margin: 0;
   padding: 0;
+}
+
+.products__item a {
+  min-height: 103px;
+  display: flex;
+  justify-content: space-between;
+
+  font-size: 19px;
+  color: #ffffff;
+
+  padding-left: 29px;
+
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+.products__interior {
+  padding-top: 23px;
+  padding-bottom: 18px;
+  padding-right: 36px;
+
+  background-color: @green-color;
+}
+
+.products__interior:hover,
+.products__interior:focus {
+  background-color: #59d5bc;
+}
+
+.products__interior:active {
+  color: fade(#ffffff, 30%);
+}
+
+.products__interior path {
+  fill: fade(#149080, 50%)
+}
+
+.products__interior:hover path,
+.products__interior:focus path {
+  fill: fade(#149080, 70%);
+}
+
+.products__interior:active path {
+  fill: fade(#149080, 30%);
+}
+
+.products__toys {
+  padding-top: 21px;
+  padding-bottom: 22px;
+  padding-right: 27px;
+
+  background-color: #56c3b2;
+}
+
+.products__toys:hover,
+.products__toys:focus {
+  background-color: #46c1ae;
+}
+
+.products__toys:active {
+  color: fade(#ffffff, 30%);
+}
+
+.products__toys path {
+  fill: fade(#149080, 50%);
+}
+
+.products__toys:hover path,
+.products__toys:focus path {
+  fill: fade(#149080, 70%);
+}
+
+.products__toys:active path {
+  fill: fade(#149080, 30%);
 }
 
 @media (min-width: @tablet-width) {
@@ -23,28 +93,4 @@
   .products__item {
     width: 525px;
   }
-}
-
-.products__item a {
-  min-height: 103px;
-  width: 100%;
-  display: inline-block;
-  vertical-align: baseline;
-
-  font-size: 19px;
-  color: #ffffff;
-
-  padding-left: 29px;
-  padding-top: 30px;
-
-  text-decoration: none;
-  box-sizing: border-box;
-}
-
-.products__interior {
-  background-color: @green-color;
-}
-
-.products__toys {
-  background-color: #56c3b2;
 }

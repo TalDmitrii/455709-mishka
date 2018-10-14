@@ -1,11 +1,47 @@
 .page-footer {
+  padding-left: 30px;
+  padding-right: 30px;
+
   background-color: @cream-color;
-  border: 1px solid red;
 }
 
 .page-footer__producer {
   font-size: 19px;
   line-height: 19px;
+
+  padding-top: 22px;
+  padding-bottom: 23px;
+  padding-left: 39px;
+}
+
+.page-footer__producer a {
+  display: flex;
+  align-items: center;
+
+  color: #000000;
+
+  text-decoration: none;
+}
+
+.page-footer__producer a:active {
+  color: fade(#000000, 30%);
+}
+
+.page-footer__producer span {
+  padding-right: 30px;
+}
+
+.page-footer__producer path {
+  fill: @green-color;
+}
+
+.page-footer__producer:hover path,
+.page-footer__producer:focus path {
+  fill: #46c1ae;
+}
+
+.page-footer__producer:active path {
+  fill: fade(#46c1ae, 30%);
 }
 
 @media (min-width: @tablet-width) {
