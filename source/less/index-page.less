@@ -23,11 +23,16 @@
 
 @media (min-width: @tablet-width) {
   .index-page__header {
-    font-size: 43px;
-    line-height: 50px;
+    .heading-tablet();
   }
 
   .index-page__header br:first-child {
     display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .index-page__header {
+    .heading-desktop();
   }
 }

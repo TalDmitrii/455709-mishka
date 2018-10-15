@@ -82,6 +82,13 @@
   .promotion {
     /// Временно ///
     min-height: 325px;
+
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .promotion__header {
+    .heading-tablet();
   }
 
   .promotion__header-wrapper {
@@ -89,24 +96,65 @@
   }
 
   .promotion__type {
+    width: 75px;
+    display: block;
+
+    text-align: center;
+
+    margin-top: 13px;
     margin-left: auto;
+    margin-right: 27px;
   }
 
   .promotion__description {
     width: 285px;
+
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-top: 44px;
   }
 
   .promotion__image {
     position: absolute;
-    top: 80px;
-    right: 0;
+    top: 140px;
+    right: 50px;
+  }
+
+  .promotion__price {
+    font-size: 20px;
+  }
+
+  .promotion__button--order {
+    width: 292px;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .promotion {
+    margin-left: 50px;
+    margin-right: 50px;
+
+    padding: 0;
+    padding-top: 54px;
+    padding-bottom: 73px;
+  }
+
+  .promotion__wrapper {
+    margin-left: 175px;
+  }
+
+  .promotion__header {
+    .heading-desktop();
+  }
+
   .promotion__type {
     order: -1;
     margin-left: 47px;
     margin-right: 58px;
+  }
+
+  .promotion__image {
+    right: 0;
   }
 }

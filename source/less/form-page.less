@@ -2,11 +2,11 @@
   font-size: 27px;
   line-height: 30px;
   color: #231f20;
+  text-align: center;
 
   margin: 0;
   padding-top: 76px;
   padding-bottom: 80px;
-  padding-left: 38px;
 
   background-color: @cream-color;
 }
@@ -24,4 +24,26 @@
 
   margin: 0;
   margin-bottom: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page__wrapper {
+    padding: 0;
+  }
+
+  .form-page__header {
+    .heading-tablet();
+
+    margin-top: -50px;
+  }
+
+  .form-page__intro {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-top: 63px;
+    margin-bottom: 54px;
+    margin-left: 50px;
+    margin-right: 100px;
+  }
 }

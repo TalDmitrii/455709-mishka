@@ -30,6 +30,7 @@
     content: "";
 
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -94,8 +95,17 @@
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .features__wrapper {
     display: flex;
+  }
+
+  .features__header {
+    .heading-tablet();
   }
 
   .features__list {
@@ -105,5 +115,21 @@
 
   .features__item {
     width: 300px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    padding-top: 70px;
+    padding-bottom: 89px;
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .features__header {
+    .heading-desktop();
   }
 }

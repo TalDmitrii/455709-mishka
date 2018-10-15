@@ -80,17 +80,53 @@
 }
 
 @media (min-width: @tablet-width) {
+  .products {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .products__list {
     display: flex;
+    position: relative;
+
+    &::after {
+      width: 100%;
+      height: 34px;
+      content: "";
+      position: absolute;
+      bottom: -20px;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-position: -15px center;
+    }
   }
 
   .products__item {
+    display: flex;
+  }
+
+  .products__item a {
     width: 334px;
+    display: flex;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-left: 36px;
+  }
+
+  .products__interior {
+    padding-top: 30px;
+  }
+
+  .products__toys {
+    padding-top: 31px;
+    padding-right: 33px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .products__item {
+  .products__item a {
     width: 525px;
   }
 }

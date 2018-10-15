@@ -6,9 +6,11 @@
 
     margin-top: 25px;
     margin-left: 50px;
+
+    background-color: transparent;
   }
 
-  .site-navigation .main-navigation__item {
+  .site-navigation__item {
     margin-right: 37px;
 
     box-shadow: none;
@@ -17,9 +19,26 @@
 
 @media (min-width: @desktop-width) {
   .site-navigation {
-    /// Временнo ///
-    width: 450px;
-
+    display: flex;
     order: -1;
+
+    font-size: 17px;
+
+    margin: 0;
+    padding-left: 50px;
+
+    box-shadow: 0 1px 0 #ececec;
+  }
+
+  .site-navigation__item {
+    margin-right: 35px;
+    padding-top: 32px;
+    padding-bottom: 33px;
+  }
+
+  .site-navigation__item:nth-child(2) {
+    padding-left: 35px;
+
+    box-shadow: -1px 0 0 #ececec;
   }
 }
