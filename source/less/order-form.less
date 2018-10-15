@@ -15,6 +15,13 @@
 
 .order-form__label {
   display: block;
+
+  font-size: 17px;
+  line-height: 17px;
+  color: @green-color;
+  text-transform: uppercase;
+
+  padding: 0;
 }
 
 .order-form__field {
@@ -23,15 +30,6 @@
   padding: 0;
 
   border: none;
-}
-
-.order-form__label {
-  font-size: 17px;
-  line-height: 17px;
-  color: @green-color;
-  text-transform: uppercase;
-
-  padding: 0;
 }
 
 .order-form__label--type {
@@ -276,6 +274,7 @@ input.order-form__input-tel {
 .order-form input::-webkit-input-placeholder {
   color: fade(@grey-color, 30%);
 }
+
 .order-form input:-moz-placeholder {
   color: fade(@grey-color, 30%);
 }
@@ -283,6 +282,7 @@ input.order-form__input-tel {
 .order-form textarea::-webkit-input-placeholder {
   color: fade(@grey-color, 30%);
 }
+
 .order-form textarea:-moz-placeholder {
   color: fade(@grey-color, 30%);
 }
@@ -392,7 +392,7 @@ input.order-form__input-tel {
   }
 
   .order-form__field--name label {
-    align-items:  center;
+    align-items: center;
   }
 
   .order-form__field--name span {
