@@ -413,9 +413,7 @@ input.order-form__input-tel {
     left: -160px;
   }
 
-  .order-form__label-tel,
-  .order-form__label-email {
-    display: flex;
+  .order-form__field--contacts .order-form__wrapper {
     width: 100%;
   }
 
@@ -426,8 +424,17 @@ input.order-form__input-tel {
     background-color: transparent;
   }
 
+  .order-form__field--add {
+    width: 500px;
+    display: flex;
+  }
+
+  .order-form__field--add label {
+    width: 500px;
+  }
+
   .order-form__field--add textarea {
-    flex-grow: 1;
+    width: 100%;
   }
 
   .order-form__field--name label,
@@ -455,7 +462,7 @@ input.order-form__input-tel {
   }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: @tablet-width - 1px) {
   .order-form__label {
     position: relative;
 
@@ -473,5 +480,43 @@ input.order-form__input-tel {
 
   .order-form__label--email::after {
     width: 179px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .order-form__field {
+    padding-left: 225px;
+  }
+
+  .order-form__field--name,
+  .order-form__field--contacts,
+  .order-form__field--add {
+    padding-right: 225px;
+  }
+
+  .order-form__tip-wrapper {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .order-form__label-tel svg {
+    top: 20px;
+  }
+
+  .order-form__label-mail svg {
+    top: 10px;
+  }
+
+  .order-form__field--add {
+    width: 700px;
+    display: flex;
+  }
+
+  .order-form__field--add label {
+    width: 700px;
+  }
+
+  .order-form__field--add textarea {
+    width: 100%;
   }
 }

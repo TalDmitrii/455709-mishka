@@ -110,7 +110,7 @@
             <img class="promotion__image" src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="Вязаные корзинки">
             <div class="promotion__price-wrapper">
               <b class="promotion__price">Цена: 990 руб.</b>
-              <button class="button promotion__button--order" type="button" aria-label="Заказать акционный товар">Заказать</button>
+              <button class="button promotion__button--order modal-open" type="button" aria-label="Заказать акционный товар">Заказать</button>
             </div>
           </div>
         </section>
@@ -252,17 +252,22 @@
         </div>
       </footer>
     </div>
-    <form class="modal-basket" action="https://echo.htmlacademy.ru" method="post">
-      <h3 class="modal-basket__header">Добавить в корзину</h3>
-      <span>Выберите размер:</span>
-      <label for="size-1">S</label>
-      <input id="size-1" type="checkbox" name="size-s" value="s" checked>
-      <label for="size-2">M</label>
-      <input id="size-2" type="checkbox" name="size-m" value="m">
-      <label for="size-3">L</label>
-      <input id="size-3" type="checkbox" name="size-l" value="l">
-      <button class="button modal-basket__button" type="button" aria-label="Добавить размер в корзину">Добавить</button>
-    </form>
+    <div class="modal-wrapper">
+      <form class="modal-basket" action="https://echo.htmlacademy.ru" method="post">
+        <h3 class="modal-basket__header">Добавить в корзину</h3>
+        <span>Выберите размер:</span>
+        <div class="modal-basket__wrapper">
+          <input class="input-size-1" id="size-1" type="checkbox" name="size-s" value="s" checked>
+          <input class="input-size-2" id="size-2" type="checkbox" name="size-m" value="m">
+          <input class="input-size-3" id="size-3" type="checkbox" name="size-l" value="l">
+          <label class="label-size-1" for="size-1">S</label>
+          <label class="label-size-2" for="size-2">M</label>
+          <label class="label-size-3" for="size-3">L</label>
+        </div>
+        <button class="button modal-basket__button modal-close" type="button" aria-label="Добавить размер в корзину">Добавить</button>
+      </form>
+      <div class="modal-overlay"></div>
+    </div>
     <script>
       var mainNav = document.querySelector('.main-navigation');
       var navToggle = document.querySelector('.main-navigation__toggle');
@@ -278,6 +283,34 @@
           mainNav.classList.remove('main-navigation--opened');
         }
       })
+    </script>
+    <script>
+      var modalForm = document.querySelector('.modal-basket');
+      var modalOverlay = document.querySelector('.modal-overlay');
+      var modalOpen = document.querySelector('.modal-open');
+      var modalClose = document.querySelector('.modal-close');
+
+      modalOpen.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        modalForm.classList.add('modal-basket--open');
+        modalOverlay.classList.add('modal-overlay--open');
+      });
+
+      modalClose.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        modalForm.classList.remove('modal-basket--open');
+        modalOverlay.classList.remove('modal-overlay--open');
+      });
+
+      window.addEventListener("keydown", function(evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (modalForm.classList.contains("modal-basket--open")) {
+            modalForm.classList.remove("modal-basket--open");
+            modalOverlay.classList.remove("modal-overlay--open");
+          }
+        }
+      });
     </script>
   </body>
 </html>

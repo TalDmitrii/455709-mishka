@@ -141,6 +141,12 @@
   .comments__button--prev {
     margin-right: 36px;
   }
+
+  .comments::after {
+    height: 17px;
+
+    background-position: -25px center;
+  }
 }
 
 @media (min-width: @desktop-width) {
@@ -158,5 +164,11 @@
 
   .comments__button-write {
     right: 0;
+  }
+
+  .comments::after {
+    height: 23px;
+
+    background-position: -25px center;
   }
 }
