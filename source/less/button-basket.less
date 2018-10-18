@@ -1,5 +1,27 @@
+.button-basket {
+  &:hover path {
+    fill: @green-color;
+  }
+
+  &:active path {
+    fill: fade(@green-color, 30%);
+  }
+}
+
+.button-basket svg {
+  margin-right: 20px;
+}
+
+.button-basket path {
+  fill: fade(#000000, 20%);
+}
+
 @media (min-width: @tablet-width) {
   .button-basket {
-    width: 265px;
+    width: 279px;
+  }
+
+  .button-basket svg {
+    margin-right: 31px;
   }
 }

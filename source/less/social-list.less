@@ -1,8 +1,39 @@
 .social-list {
   display: flex;
+  align-items: center;
 
   list-style: none;
 
   margin: 0;
   padding: 0;
+  padding-top: 25px;
+  padding-bottom: 27px;
+  padding-left: 57px;
+
+  box-shadow: 0 1px 0 #ececec;
+}
+
+.social-list__item {
+  display: flex;
+
+  margin-right: 41px;
+}
+
+.social-list__item:hover path,
+.social-list__item:focus path {
+  fill: #46c1ae;
+}
+
+.social-list__item:active path {
+  fill: fade(#46c1ae, 30%);
+}
+
+@media (min-width: @tablet-width) {
+  .social-list {
+    padding: 0;
+  }
+
+  // .social-list {
+  //   margin-right: 43px;
+  // }
 }

@@ -2,19 +2,18 @@
   font-size: 27px;
   line-height: 30px;
   color: #231f20;
+  text-align: center;
 
   margin: 0;
   padding-top: 76px;
   padding-bottom: 80px;
-  padding-left: 38px;
 
   background-color: @cream-color;
 }
 
 .form-page__wrapper {
   padding: 30px;
-
-  border: 1px solid red;
+  padding-top: 23px;
 }
 
 .form-page__intro {
@@ -24,4 +23,34 @@
   color: @grey-color;
 
   margin: 0;
+  margin-bottom: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .form-page__wrapper {
+    padding: 0;
+  }
+
+  .form-page__header {
+    .heading-tablet();
+
+    margin-top: -50px;
+  }
+
+  .form-page__intro {
+    font-size: 17px;
+    line-height: 30px;
+
+    margin-top: 63px;
+    margin-bottom: 54px;
+    margin-left: 50px;
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form-page__intro {
+    margin-left: 225px;
+    margin-right: 230px;
+  }
 }

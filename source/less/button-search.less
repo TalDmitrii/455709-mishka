@@ -1,5 +1,58 @@
+.button-search {
+  display: block;
+
+  font-family: "Open Sans", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #000000;
+
+  padding-top: 32px;
+  padding-bottom: 30px;
+  padding-left: 32px;
+  padding-right: 107px;
+
+  background-color: transparent;
+  border: none;
+
+  &:hover {
+    color: fade(#000000, 60%);
+  }
+
+  &:active {
+    color: fade(#000000, 30%);
+  }
+
+  &:hover path {
+    fill: @green-color;
+  }
+
+  &:active path {
+    fill: fade(@green-color, 30%);
+  }
+}
+
+.button-search svg {
+  margin-right: 20px;
+}
+
+.button-search path {
+  fill: fade(#000000, 20%);
+}
+
 @media (min-width: @tablet-width) {
   .button-search {
     width: 85px;
+
+    padding-top: 33px;
+    padding-bottom: 30px;
+    padding-left: 33px;
+    padding-right: 31px;
+
+    box-shadow: 1px 0 0 #ececec, -1px 0 0 #ececec;
+  }
+
+  .button-search span {
+    display: none;
   }
 }

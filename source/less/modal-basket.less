@@ -1,18 +1,136 @@
 .modal-basket {
+  width: 320px;
   display: none;
+  position: fixed;
+  z-index: 501;
+  top: 50px;
+  left: 50%;
 
+  line-height: 17px;
+
+  margin-left: -160px;
   padding-top: 36px;
   padding-bottom: 46px;
   padding-left: 30px;
   padding-right: 30px;
+
+  box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+  border: 1px solid #c6c6c6;
+  box-sizing: border-box;
+}
+
+.modal-basket--open {
+  display: block;
 }
 
 .modal-basket__header {
-  .heading();
+  width: 150px;
 
-  margin: 0;
+  .heading();
+  text-align: center;
+
+  margin: 0 auto;
+  margin-bottom: 15px;
+}
+
+.modal-basket__wrapper {
+  width: 260px;
+  height: 52px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.modal-basket__wrapper input {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+
+  clip: rect(0, 0, 0, 0);
+}
+
+.input-size-1:checked ~ .label-size-1,
+.input-size-2:checked ~ .label-size-2,
+.input-size-3:checked ~ .label-size-3 {
+  border: 2px solid @green-color;
+}
+
+.modal-basket label {
+  width: 82px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid fade(@grey-color, 10%);
+  box-sizing: border-box;
+}
+
+.modal-basket label:hover,
+.modal-basket label:focus {
+  border: 2px solid fade(@grey-color, 30%);
+}
+
+.modal-basket label:active {
+  border: 2px solid @green-color;
 }
 
 .modal-basket__button {
+  color: #ffffff;
+
   background-color: @green-color;
+  border: none;
+}
+
+.modal-basket span {
+  display: block;
+  vertical-align: baseline;
+
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: @grey-color;
+  text-align: center;
+
+  margin-bottom: 20px;
+}
+
+@media (min-width: @tablet-width) {
+  .modal-basket {
+    width: 566px;
+
+    margin-left: -283px;
+    padding-left: 107px;
+    padding-right: 107px;
+  }
+
+  .modal-basket__header {
+    width: 355px;
+
+    font-size: 30px;
+    line-height: 57px;
+  }
+
+  .modal-basket span {
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .modal-basket__wrapper {
+    width: 350px;
+  }
+
+  .modal-basket label {
+    width: 112px;
+  }
+
+  .modal-basket__button {
+    width: 350px;
+  }
 }

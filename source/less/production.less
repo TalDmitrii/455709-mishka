@@ -1,15 +1,36 @@
 .production {
   padding: 30px;
+  padding-bottom: 58px;
+}
 
-  border: 1px solid red;
+.production__wrapper {
+  border: 1px solid #ececec;
+
+  padding-bottom: 33px;
 }
 
 .production__header {
+  position: relative;
+
   font-size: 17px;
   line-height: 24px;
   font-weight: 700;
 
   margin: 0;
+  padding-top: 25px;
+  padding-bottom: 22px;
+  padding-left: 91px;
+
+  &::after {
+    width: 32px;
+    height: 32px;
+    content: "";
+    position: absolute;
+    left: 34px;
+    top: 30px;
+
+    background-image: url("../img/icon-video.svg");
+  }
 }
 
 .production__text {
@@ -17,46 +38,115 @@
   line-height: 24px;
   font-weight: 400;
   color: @grey-color;
+
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  padding-left: 34px;
+  padding-right: 41px;
 }
 
 .production__button {
+  width: 192px;
+
   font-size: 17px;
   line-height: 17px;
+
+  margin-left: 34px;
 
   text-decoration: none;
 }
 
 @media (min-width: @tablet-width) {
+  .production {
+    position: relative;
+
+    padding-top: 455px;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .production__wrapper {
     display: flex;
     flex-direction: column;
+
+    padding-bottom: 46px;
   }
 
   .production img {
-    width: 608px;
+    width: 668px;
     height: 455px;
-    order: -1;
+    position: absolute;
+    top: 0;
+    left: 50px;
+  }
+
+  .production__header {
+    font-size: 20px;
+
+    padding-top: 41px;
+    padding-left: 107px;
+
+    &::after {
+      top: 39px;
+      left: 42px;
+    }
+  }
+
+  .production__text {
+    font-size: 15px;
+    line-height: 30px;
+
+    padding-left: 40px;
+  }
+
+  .production__button {
+    width: 584px;
+
+    margin-left: 42px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .production {
     display: flex;
-    position: relative;
-    min-height: 400px;
+
+    padding-top: 0;
+    padding-bottom: 105px;
   }
 
   .production__wrapper {
     width: 367px;
 
     margin-left: auto;
+    padding-bottom: 0;
+  }
+
+  .production__header {
+    padding-top: 98px;
+    padding-left: 79px;
+
+    &::after {
+      top: 47px;
+      left: 80px;
+    }
   }
 
   .production img {
-    width: 600px;
-    height: 430px;
+    width: 682px;
+    height: 455px;
     position: absolute;
-    top: 0;
-    left: 0;
+  }
+
+  .production__text {
+    padding-bottom: 57px;
+    padding-left: 79px;
+  }
+
+  .production__button {
+    width: 230px;
+
+    margin-left: 80px;
+    margin-bottom: 60px;
   }
 }

@@ -1,10 +1,8 @@
 .features {
-  padding-top: 34px;
+  padding-top: 29px;
   padding-bottom: 34px;
   padding-left: 30px;
   padding-right: 30px;
-
-  border: 1px solid red;
 }
 
 .features__header {
@@ -21,12 +19,93 @@
 }
 
 .features__item {
+  position: relative;
+
   line-height: 20px;
+
+  margin-top: 85px;
+
+  &::before {
+    position: absolute;
+    content: "";
+
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.features__item--eco::before {
+  width: 32px;
+  height: 37px;
+
+  top: -57px;
+  left: 9px;
+
+  background-image: url("../img/icon-feature-flower.svg");
+}
+
+.features__item--style::before {
+  width: 47px;
+  height: 27px;
+
+  top: -55px;
+  left: 0;
+
+  background-image: url("../img/icon-feature-money.svg");
+}
+
+.features__item--like::before {
+  width: 34px;
+  height: 27px;
+
+  top: -50px;
+  left: 8px;
+
+  background-image: url("../img/icon-feature-heart.svg");
+}
+
+.features__item--handmade::before {
+  width: 35px;
+  height: 34px;
+
+  top: -54px;
+  left: 3px;
+
+  background-image: url("../img/icon-feature-ball.svg");
+}
+
+.features__item--support::before {
+  width: 55px;
+  height: 23px;
+
+  top: -53px;
+  left: -7px;
+
+  background-image: url("../img/icon-feature-rocket.svg");
+}
+
+.features__item--wrapper::before {
+  width: 33px;
+  height: 32px;
+
+  top: -55px;
+  left: 2px;
+
+  background-image: url("../img/icon-feature-gift.svg");
 }
 
 @media (min-width: @tablet-width) {
+  .features {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
   .features__wrapper {
     display: flex;
+  }
+
+  .features__header {
+    .heading-tablet();
   }
 
   .features__list {
@@ -36,5 +115,21 @@
 
   .features__item {
     width: 300px;
+
+    font-size: 20px;
+    line-height: 22px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    padding-top: 70px;
+    padding-bottom: 89px;
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+
+  .features__header {
+    .heading-desktop();
   }
 }
