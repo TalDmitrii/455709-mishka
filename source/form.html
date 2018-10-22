@@ -11,7 +11,11 @@
       <header class="page-header">
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <a class="page-header__logo" href="index.html">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+            </picture>
           </a>
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Закрыть меню</span>
@@ -60,10 +64,10 @@
         <div class="form-page__wrapper">
           <p class="form-page__intro">
             Мы будем рады воплотить в жизнь ваши пожелания!
-            Заполните простую форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+            Заполните простую форму<br> заказа и мы свяжемся с вами, чтобы уточнить детали.
           </p>
           <form class="form-page__form order-form" action="https://echo.htmlacademy.ru" method="post">
-            <div class="order-form__field">
+            <div class="order-form__field order-form__field--type">
               <div class="order-form__label order-form__label--type">Тип</div>
               <div class="order-form__wrapper">
                 <input class="visually-hidden order-form__type-1" id="type-1" type="radio" name="type" checked>
@@ -142,7 +146,7 @@
               <legend class="visually-hidden">Дополнительно</legend>
               <label>
                 <span class="order-form__label">Доп</span>
-                <textarea rows="5" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                <textarea rows="6" placeholder="Опишите все ваши пожелания к заказу"></textarea>
               </label>
             </fieldset>
             <div class="order-form__tip-wrapper">

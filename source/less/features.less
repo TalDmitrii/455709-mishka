@@ -24,6 +24,8 @@
 
   line-height: 20px;
 
+  margin-top: 83px;
+
   &::before {
     position: absolute;
     content: "";
@@ -31,10 +33,6 @@
     background-repeat: no-repeat;
     background-size: cover;
   }
-}
-
-.features__item {
-  margin-top: 83px;
 }
 
 .features__item--eco {
@@ -140,13 +138,17 @@
 
 @media (min-width: @desktop-width) {
   .features {
-    padding-top: 70px;
-    padding-bottom: 89px;
-    padding-left: 225px;
+    padding-top: 60px;
+    padding-bottom: 86px;
+    padding-left: 275px;
     padding-right: 225px;
   }
 
   .features__header {
     .heading-desktop();
+  }
+
+  .features__item {
+    width: 350px;
   }
 }

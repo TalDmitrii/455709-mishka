@@ -16,6 +16,10 @@
   background-position: center top;
   background-repeat: no-repeat;
   background-size: cover;
+
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image: url("../img/hero-mobile@2x.jpg");
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -51,5 +55,22 @@
 @media (min-width: @desktop-width) {
   .index-page__header {
     .heading-desktop();
+
+    &::before {
+      width: 100%;
+      height: 9px;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 10;
+
+      background-color: #ffffff;
+    }
+
+    &::after {
+      height: 36px;
+      bottom: 9px;
+    }
   }
 }
