@@ -1,5 +1,6 @@
 .production {
   padding: 30px;
+  padding-top: 0;
   padding-bottom: 58px;
 }
 
@@ -7,6 +8,14 @@
   border: 1px solid #ececec;
 
   padding-bottom: 33px;
+}
+
+.production__wrapper:hover {
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+}
+
+.production__wrapper:active {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
 .production__header {
@@ -46,6 +55,10 @@
   padding-right: 41px;
 }
 
+.production__video-wrapper {
+  position: relative;
+}
+
 .production__button {
   width: 192px;
 
@@ -62,6 +75,7 @@
     position: relative;
 
     padding-top: 455px;
+    padding-bottom: 63px;
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -73,22 +87,26 @@
     padding-bottom: 46px;
   }
 
-  .production img {
-    width: 668px;
-    height: 455px;
+  .production__video-wrapper {
     position: absolute;
     top: 0;
     left: 50px;
   }
 
+  .production img {
+    width: 668px;
+    height: 455px;
+  }
+
   .production__header {
     font-size: 20px;
 
-    padding-top: 41px;
+    padding-top: 37px;
+    padding-bottom: 10px;
     padding-left: 107px;
 
     &::after {
-      top: 39px;
+      top: 35px;
       left: 42px;
     }
   }
@@ -98,6 +116,7 @@
     line-height: 30px;
 
     padding-left: 40px;
+    padding-bottom: 35px;
   }
 
   .production__button {
@@ -107,12 +126,20 @@
   }
 }
 
+@media (max-width: @desktop-width - 1px) {
+  .production__header br {
+    display: none;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .production {
     display: flex;
 
     padding-top: 0;
     padding-bottom: 105px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   .production__wrapper {
@@ -123,23 +150,26 @@
   }
 
   .production__header {
-    padding-top: 98px;
+    padding-top: 95px;
     padding-left: 79px;
 
     &::after {
-      top: 47px;
+      top: 42px;
       left: 80px;
     }
+  }
+
+  .production__video-wrapper {
+    left: 100px;
   }
 
   .production img {
     width: 682px;
     height: 455px;
-    position: absolute;
   }
 
   .production__text {
-    padding-bottom: 57px;
+    padding-bottom: 47px;
     padding-left: 79px;
   }
 

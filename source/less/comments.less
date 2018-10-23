@@ -1,29 +1,31 @@
 .comments {
   position: relative;
 
-  padding-top: 27px;
-  padding-bottom: 45px;
+  padding-top: 20px;
+  padding-bottom: 50px;
   padding-left: 30px;
   padding-right: 30px;
-}
 
-.comments::after {
-  width: 100%;
-  height: 6px;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  &::after {
+    width: 100%;
+    height: 6px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-size: contain;
-  background-position: -6px center;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: -6px center;
+  }
 }
 
 .comments__header {
   .heading();
 
   margin: 0;
+  margin-bottom: 25px;
 }
 
 .comments__text {
@@ -31,6 +33,9 @@
   line-height: 30px;
   font-weight: 400;
   color: @grey-color;
+
+  margin: 0;
+  margin-bottom: 27px;
 }
 
 .comments__button-wrapper {
@@ -58,7 +63,7 @@
   content: "";
   position: absolute;
   left: 37px;
-  bottom: 13px;
+  bottom: 11px;
 }
 
 .comments__button:hover::before,
@@ -91,16 +96,23 @@
     position: relative;
 
     padding-top: 76px;
-    padding-bottom: 68px;
+    padding-bottom: 105px;
     padding-left: 50px;
     padding-right: 50px;
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+      background-size: 350px;
+    }
   }
 
   .comments__header {
     .heading-tablet();
+
+    margin-left: -5px;
   }
 
   .comments__text {
@@ -115,6 +127,7 @@
   }
 
   .comments__button-wrapper {
+    margin-top: 15px;
     margin-left: auto;
     margin-right: 19px;
   }
@@ -149,17 +162,28 @@
   }
 }
 
+@media (max-width: @desktop-width - 1px) {
+  .comments__text br {
+    display: none;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .comments {
-    margin-left: 50px;
-    margin-right: 50px;
-    padding-bottom: 145px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding-top: 70px;
+    padding-bottom: 155px;
     padding-left: 175px;
     padding-right: 0;
   }
 
   .comments__header {
     .heading-desktop();
+  }
+
+  .comments__text {
+    margin-bottom: 40px;
   }
 
   .comments__button-write {

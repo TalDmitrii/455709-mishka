@@ -26,14 +26,14 @@
 
 .order-form__field {
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   padding: 0;
 
   border: none;
 }
 
 .order-form__label--type {
-  margin-bottom: 27px;
+  margin-bottom: 24px;
 }
 
 .order-form__label-type {
@@ -41,8 +41,8 @@
   align-items: center;
   position: relative;
 
-  margin-bottom: 14px;
-  padding-top: 11px;
+  margin-bottom: 13px;
+  padding-top: 9px;
   padding-left: 62px;
 
   &::before {
@@ -135,8 +135,12 @@
   background-size: cover;
 }
 
+.order-form__field--name {
+  margin-bottom: 28px;
+}
+
 .order-form__label--name {
-  margin-bottom: 32px;
+  margin-bottom: 26px;
 }
 
 .order-form__field--name input {
@@ -193,7 +197,7 @@ input.order-form__input-tel {
   line-height: 19px;
 
   padding-top: 16px;
-  padding-bottom: 21px;
+  padding-bottom: 18px;
 }
 
 .order-form__label-tel {
@@ -226,7 +230,7 @@ input.order-form__input-tel {
 
 .order-form__label-mail svg {
   position: absolute;
-  top: 27px;
+  top: 30px;
   right: 4px;
 }
 
@@ -254,6 +258,8 @@ input.order-form__input-tel {
 }
 
 .order-form__field--add textarea {
+  min-height: 142px;
+
   font-family: "Open Sans", sans-serif;
   font-size: 17px;
   line-height: 18px;
@@ -264,6 +270,7 @@ input.order-form__input-tel {
   padding-left: 15px;
 
   border: 2px solid @grey-color;
+  box-sizing: border-box;
 }
 
 .order-form__field--add textarea:hover,
@@ -319,6 +326,10 @@ input.order-form__input-tel {
     padding-right: 50px;
   }
 
+  .order-form__field--type {
+    padding-bottom: 28px;
+  }
+
   .order-form__label {
     position: absolute;
     top: 69px;
@@ -326,8 +337,9 @@ input.order-form__input-tel {
   }
 
   .order-form__label-type {
-    padding-top: 16px;
     margin-bottom: 40px;
+    padding-top: 16px;
+    padding-left: 80px;
 
     &::before {
       width: 48px;
@@ -349,7 +361,8 @@ input.order-form__input-tel {
   }
 
   .order-form__field--color {
-    padding-bottom: 35px;
+    padding-bottom: 26px;
+    padding-right: 0;
 
     background-color: #f1f1f1;
   }
@@ -360,13 +373,15 @@ input.order-form__input-tel {
   }
 
   .order-form__wrapper--color label {
-    width: 240px;
+    width: 260px;
 
     box-sizing: border-box;
   }
 
   .order-form__label-color {
     margin-bottom: 32px;
+    padding-top: 15px;
+    padding-left: 80px;
 
     &::before {
       width: 50px;
@@ -401,16 +416,27 @@ input.order-form__input-tel {
 
   .order-form__field--name input {
     flex-grow: 1;
+
+    font-size: 19px;
+    line-height: 19px;
+
+    padding-top: 11px;
+    padding-bottom: 16px;
+    padding-left: 15px;
   }
 
   .order-form__field--contacts {
     background-color: #f1f1f1;
   }
 
+  .order-form__label-tel {
+    margin-bottom: 23px;
+  }
+
   .order-form__label--tel,
   .order-form__label--email {
-    top: 20px;
-    left: -160px;
+    top: 18px;
+    left: -165px;
   }
 
   .order-form__field--contacts .order-form__wrapper {
@@ -424,9 +450,33 @@ input.order-form__input-tel {
     background-color: transparent;
   }
 
+  input.order-form__input-tel,
+  input.order-form__input-email {
+    font-size: 19px;
+    line-height: 19px;
+
+    padding-top: 12px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+  }
+
+  .order-form__label-tel svg {
+    position: absolute;
+    top: 13px;
+    right: 25px;
+  }
+
+  .order-form__label-mail svg {
+    position: absolute;
+    top: 12px;
+    right: 21px;
+  }
+
   .order-form__field--add {
     width: 500px;
     display: flex;
+
+    padding-bottom: 53px;
   }
 
   .order-form__field--add label {
@@ -435,6 +485,9 @@ input.order-form__input-tel {
 
   .order-form__field--add textarea {
     width: 100%;
+
+    font-size: 19px;
+    line-height: 19px;
   }
 
   .order-form__field--name label,
@@ -444,6 +497,9 @@ input.order-form__input-tel {
   }
 
   .order-form__tip {
+    font-size: 17px;
+    line-height: 30px;
+
     margin: 0;
   }
 
@@ -494,22 +550,41 @@ input.order-form__input-tel {
     padding-right: 225px;
   }
 
+  .order-form__label {
+    top: 66px;
+    left: 113px;
+  }
+
+  .order-form__wrapper--color label {
+    width: 262px;
+  }
+
   .order-form__tip-wrapper {
     padding-left: 225px;
     padding-right: 225px;
   }
 
+  .order-form__label--tel,
+  .order-form__label--email {
+    top: 18px;
+    left: -113px;
+  }
+
   .order-form__label-tel svg {
-    top: 20px;
+    top: 10px;
+    right: 10px;
   }
 
   .order-form__label-mail svg {
     top: 10px;
+    right: 5px;
   }
 
   .order-form__field--add {
     width: 700px;
     display: flex;
+
+    padding-bottom: 48px;
   }
 
   .order-form__field--add label {

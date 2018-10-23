@@ -5,25 +5,25 @@
   font-weight: 400;
   color: @grey-color;
 
-  padding-top: 34px;
-  padding-bottom: 36px;
+  padding-top: 25px;
+  padding-bottom: 40px;
   padding-left: 30px;
   padding-right: 30px;
 
   background-color: #ffffff;
-}
 
-.promotion::after {
-  width: 100%;
-  height: 6px;
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  &::after {
+    width: 100%;
+    height: 6px;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
 
-  background-image: url("../img/bg-zigzag-line.svg");
-  background-size: contain;
-  background-position: -6px center;
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 }
 
 .promotion__header {
@@ -31,6 +31,7 @@
   color: #000000;
 
   margin: 0;
+  margin-bottom: 5px;
 }
 
 .promotion__type {
@@ -42,6 +43,10 @@
 
 .promotion__description {
   width: 252px;
+
+  margin: 0;
+  margin-top: 20px;
+  margin-bottom: 17px;
 }
 
 .promotion__price-wrapper {
@@ -53,7 +58,7 @@
 .promotion__table {
   width: 260px;
 
-  margin-bottom: 28px;
+  margin-bottom: 26px;
 }
 
 .promotion__table tr {
@@ -68,7 +73,7 @@
 }
 
 .promotion__image {
-  margin-bottom: 25px;
+  margin-bottom: 19px;
 }
 
 .promotion__price {
@@ -80,11 +85,14 @@
 
 @media (min-width: @tablet-width) {
   .promotion {
-    /// Временно ///
-    min-height: 325px;
-
+    padding-top: 45px;
+    padding-bottom: 67px;
     padding-left: 50px;
     padding-right: 50px;
+
+    &::after {
+      height: 17px;
+    }
   }
 
   .promotion__header {
@@ -99,9 +107,10 @@
     width: 75px;
     display: block;
 
+    line-height: 17px;
     text-align: center;
 
-    margin-top: 13px;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: 27px;
   }
@@ -113,37 +122,46 @@
     line-height: 30px;
 
     margin-top: 44px;
+    margin-bottom: 30px;
   }
 
   .promotion__image {
+    width: 333px;
+    height: 404px;
     position: absolute;
-    top: 140px;
+    top: 150px;
     right: 50px;
   }
 
+  .promotion__table {
+    margin-bottom: 55px;
+  }
+
   .promotion__price {
+    width: 292px;
+
     font-size: 20px;
+
+    margin-bottom: 35px;
   }
 
   .promotion__button--order {
     width: 292px;
   }
-
-  .promotion::after {
-    height: 17px;
-
-    background-position: -25px center;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .promotion {
-    margin-left: 50px;
+    margin-left: 100px;
     margin-right: 50px;
 
     padding: 0;
-    padding-top: 54px;
-    padding-bottom: 73px;
+    padding-top: 122px;
+    padding-bottom: 98px;
+
+    &::after {
+      height: 23px;
+    }
   }
 
   .promotion__wrapper {
@@ -151,16 +169,33 @@
   }
 
   .promotion__header {
+    z-index: 10;
+
     .heading-desktop();
+
+    margin-left: -7px;
   }
 
   .promotion__type {
     order: -1;
-    margin-left: 47px;
+
+    margin-top: 13px;
+    margin-left: 44px;
     margin-right: 58px;
   }
 
   .promotion__image {
-    right: 0;
+    width: 525px;
+    height: 636px;
+    top: 70px;
+    right: 50px;
+  }
+
+  .promotion__table {
+    margin-bottom: 105px;
+  }
+
+  .promotion__description {
+    margin-bottom: 45px;
   }
 }

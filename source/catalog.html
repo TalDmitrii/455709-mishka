@@ -11,7 +11,11 @@
       <header class="page-header">
         <nav class="main-navigation main-navigation--opened main-navigation--nojs">
           <a class="page-header__logo" href="index.html">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+            <picture>
+              <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
+              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+              <img src="img/logo-mobile.svg" width="86" height="35" alt="Логотип интернет-магазина Мишка">
+            </picture>
           </a>
           <button class="main-navigation__toggle" type="button">
             <span class="visually-hidden">Закрыть меню</span>
@@ -60,7 +64,11 @@
         <ul class="catalog-page__list catalog-list">
           <li class="catalog-list__item">
             <a class="catalog-list__image" href="#">
-              <img src="img/photo-hare-mobile@1x.jpg" width="260" height="195" alt="img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-hare-desktop@1x.jpg 1x, img/photo-hare-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-hare-tablet@1x.jpg 1x, img/photo-hare-tablet@2x.jpg 2x">
+                <img src="img/photo-hare-mobile@1x.jpg" srcset="img/photo-hare-mobile@2x.jpg" width="260" height="195" alt="img">
+              </picture>
             </a>
             <div class="catalog-list__wrapper">
               <h2 class="catalog-list__header">
@@ -82,7 +90,11 @@
           </li>
           <li class="catalog-list__item">
             <a class="catalog-list__image" href="#">
-              <img src="img/photo-bowl-mobile@1x.jpg" width="260" height="195" alt="img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-bowl-desktop@1x.jpg 1x, img/photo-bowl-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-bowl-tablet@1x.jpg 1x, img/photo-bowl-tablet@2x.jpg 2x">
+                <img src="img/photo-bowl-mobile@1x.jpg" srcset="img/photo-bowl-mobile@2x.jpg" width="260" height="195" alt="img">
+              </picture>
             </a>
             <div class="catalog-list__wrapper">
               <h2 class="catalog-list__header">
@@ -104,11 +116,15 @@
           </li>
           <li class="catalog-list__item">
             <a class="catalog-list__image" href="#">
-              <img src="img/photo-toys-mobile@1x.jpg" width="260" height="195" alt="img">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/photo-toys-desktop@1x.jpg 1x, img/photo-toys-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/photo-toys-tablet@1x.jpg 1x, img/photo-toys-tablet@2x.jpg 2x">
+                <img src="img/photo-toys-mobile@1x.jpg" srcset="img/photo-toys-mobile@2x.jpg" width="260" height="195" alt="img">
+              </picture>
             </a>
             <div class="catalog-list__wrapper">
               <h2 class="catalog-list__header">
-                <a href="#">Большая корзинка для игрушек</a>
+                <a href="#">Большая корзинка<br> для игрушек</a>
               </h2>
               <div class="catalog-list__description">
                 Диаметр 30 см, высота 30 см
@@ -127,9 +143,18 @@
         </ul>
         <section class="catalog-page__production production">
           <div class="production__wrapper">
-            <h2 class="production__header">Процесс производства</h2>
+            <h2 class="production__header">Процесс<br> производства</h2>
             <video class="visually-hidden" controls preload="metadata" width="260" height="150"></video>
-            <img src="img/video-mobile@1x.jpg" width="258" height="150" alt="img">
+            <div class="production__video-wrapper">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x">
+                <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg" width="258" height="150" alt="img">
+              </picture>
+              <button class="button-play" type="button">
+                <span class="visually-hidden">Включить видео</span>
+              </button>
+            </div>
             <p class="production__text">
               По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том,
               как появляются наши товары.

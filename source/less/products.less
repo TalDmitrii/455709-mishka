@@ -21,7 +21,7 @@
 
 .products__interior {
   padding-top: 23px;
-  padding-bottom: 18px;
+  padding-bottom: 15px;
   padding-right: 36px;
 
   background-color: @green-color;
@@ -50,8 +50,8 @@
 }
 
 .products__toys {
-  padding-top: 21px;
-  padding-bottom: 22px;
+  padding-top: 23px;
+  padding-bottom: 15px;
   padding-right: 27px;
 
   background-color: #56c3b2;
@@ -88,17 +88,6 @@
   .products__list {
     display: flex;
     position: relative;
-
-    &::after {
-      width: 100%;
-      height: 34px;
-      content: "";
-      position: absolute;
-      bottom: -20px;
-
-      background-image: url("../img/bg-zigzag-fill.svg");
-      background-position: -15px center;
-    }
   }
 
   .products__item {
@@ -113,6 +102,7 @@
     line-height: 30px;
 
     padding-left: 36px;
+    padding-bottom: 28px;
   }
 
   .products__interior {
@@ -126,6 +116,11 @@
 }
 
 @media (min-width: @desktop-width) {
+  .products {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
   .products__item a {
     width: 525px;
   }
