@@ -1,10 +1,17 @@
+.section-wrapper {
+  position: relative;
+}
+
 @media (min-width: @desktop-width) {
   .section-wrapper {
+    width: 1150px;
     display: flex;
     flex-direction: row;
 
+    margin: 0 auto;
     margin-top: 70px;
     padding-left: 225px;
-    padding-right: 100px;
+
+    box-sizing: border-box;
   }
 }

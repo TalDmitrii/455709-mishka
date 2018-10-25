@@ -80,7 +80,7 @@
   }
 }
 
-@media (max-width: @tablet-width) {
+@media (max-width: @tablet-width - 1px) {
   .page-footer__logo {
     display: none;
   }
@@ -91,6 +91,12 @@
     width: 1050px;
 
     padding-top: 55px;
+  }
+
+  .site-page--index .page-footer__wrapper {
+    width: 1250px;
+
+    margin: 0 auto;
   }
 
   .page-footer__logo {

@@ -1,9 +1,11 @@
 .contacts {
+  width: 320px;
   position: relative;
 
   color: @grey-color;
   font-weight: 400;
 
+  margin: 0 auto;
   padding-top: 38px;
   padding-bottom: 37px;
   padding-left: 28px;
@@ -63,6 +65,8 @@
 
 @media (min-width: @tablet-width) {
   .contacts {
+    width: 768px;
+
     padding-bottom: 32px;
     padding-top: 62px;
     padding-left: 47px;
@@ -74,7 +78,7 @@
       position: absolute;
 
       top: 47px;
-      right: 53px;
+      right: 100px;
 
       background-image: url("../img/icon-flag.svg");
       background-repeat: no-repeat;
@@ -104,7 +108,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: @desktop-width) {
+@media (min-width: @tablet-width) and (max-width: @desktop-width - 1px) {
   .contacts__table {
     display: flex;
     flex-direction: row;
@@ -132,6 +136,7 @@
     .heading-desktop();
 
     margin-bottom: 48px;
+    margin-left: -3px;
   }
 
   .contacts__tr--2 .contacts__td {
