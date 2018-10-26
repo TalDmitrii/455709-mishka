@@ -96,6 +96,7 @@
 
   .products__item a {
     width: 334px;
+    position: relative;
     display: flex;
 
     font-size: 20px;
@@ -109,18 +110,37 @@
       min-height: 108px;
 
       margin-top: -5px;
+      margin-bottom: 5px;
       padding-top: 25px;
       padding-bottom: 33px;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      width: 100%;
+      height: 5px;
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: 0;
     }
   }
 
   .products__interior {
     padding-top: 30px;
+
+    &:hover::after {
+      background-color: #59d5bc;
+    }
   }
 
   .products__toys {
     padding-top: 31px;
     padding-right: 33px;
+
+    &:hover::after {
+      background-color: #46c1ae;
+    }
   }
 }
 
