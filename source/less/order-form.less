@@ -32,6 +32,13 @@
   border: none;
 }
 
+.order-form__type-1:focus ~ .order-form__label-type--1,
+.order-form__type-2:focus ~ .order-form__label-type--2 {
+  &::before {
+    border-color: @green-color;
+  }
+}
+
 .order-form__label--type {
   margin-bottom: 24px;
 }
@@ -121,6 +128,17 @@
     position: absolute;
     top: 12px;
     left: 9px;
+  }
+}
+
+.order-form__color-1:focus ~ .order-form__label-color-1,
+.order-form__color-2:focus ~ .order-form__label-color-2,
+.order-form__color-3:focus ~ .order-form__label-color-3,
+.order-form__color-4:focus ~ .order-form__label-color-4,
+.order-form__color-5:focus ~ .order-form__label-color-5,
+.order-form__color-6:focus ~ .order-form__label-color-6 {
+  &::before {
+    border-color: @green-color;
   }
 }
 

@@ -279,54 +279,8 @@
       </form>
       <div class="modal-overlay"></div>
     </div>
-    <script>
-      var mainNav = document.querySelector('.main-navigation');
-      var navToggle = document.querySelector('.main-navigation__toggle');
-
-      mainNav.classList.remove('main-navigation--nojs');
-
-      if (mainNav.classList.contains('main-navigation--opened')) {
-        mainNav.classList.remove('main-navigation--opened');
-        mainNav.classList.add('main-navigation--closed');
-      }
-
-      navToggle.addEventListener('click', function(){
-        if (mainNav.classList.contains('main-navigation--closed')) {
-          mainNav.classList.remove('main-navigation--closed');
-          mainNav.classList.add('main-navigation--opened');
-        } else {
-          mainNav.classList.add('main-navigation--closed');
-          mainNav.classList.remove('main-navigation--opened');
-        }
-      });
-    </script>
-    <script>
-      var modalForm = document.querySelector('.modal-basket');
-      var modalOverlay = document.querySelector('.modal-overlay');
-      var modalOpen = document.querySelector('.modal-open');
-      var modalClose = document.querySelector('.modal-close');
-
-      modalOpen.addEventListener('click', function(evt) {
-        evt.preventDefault();
-        modalForm.classList.add('modal-basket--open');
-        modalOverlay.classList.add('modal-overlay--open');
-      });
-
-      modalClose.addEventListener('click', function(evt) {
-        evt.preventDefault();
-        modalForm.classList.remove('modal-basket--open');
-        modalOverlay.classList.remove('modal-overlay--open');
-      });
-
-      window.addEventListener("keydown", function(evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (modalForm.classList.contains("modal-basket--open")) {
-            modalForm.classList.remove("modal-basket--open");
-            modalOverlay.classList.remove("modal-overlay--open");
-          }
-        }
-      });
-    </script>
+    <script src="js/modal.min.js"></script>
+    <script src="js/menutoggle.min.js"></script>
+    <script src="js/picturefill.min.js"></script>
   </body>
 </html>
