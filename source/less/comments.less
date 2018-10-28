@@ -171,12 +171,15 @@
 
 @media (min-width: @desktop-width) {
   .comments {
-    margin-left: 100px;
-    margin-right: 100px;
+    max-width: 1050px;
+
+    margin: 0 auto;
     padding-top: 70px;
     padding-bottom: 155px;
     padding-left: 175px;
     padding-right: 0;
+
+    box-sizing: border-box;
   }
 
   .comments__header {
