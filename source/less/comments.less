@@ -7,7 +7,7 @@
   padding-right: 30px;
 
   &::after {
-    width: 330px;
+    width: 100%;
     height: 6px;
     content: "";
     position: absolute;
@@ -16,7 +16,7 @@
 
     background-image: url("../img/bg-zigzag-line.svg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 330px auto;
   }
 }
 
@@ -107,6 +107,7 @@
       height: 17px;
 
       background-position: -25px center;
+      background-size: cover;
     }
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
