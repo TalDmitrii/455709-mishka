@@ -15,12 +15,12 @@ modalClose.addEventListener('click', function(evt) {
   modalOverlay.classList.remove('modal-overlay--open');
 });
 
-window.addEventListener("keydown", function(evt) {
+window.addEventListener('keydown', function(evt) {
   if (evt.keyCode === 27) {
     evt.preventDefault();
-    if (modalForm.classList.contains("modal-basket--open")) {
-      modalForm.classList.remove("modal-basket--open");
-      modalOverlay.classList.remove("modal-overlay--open");
+    if (modalForm.classList.contains('modal-basket--open')) {
+      modalForm.classList.remove('modal-basket--open');
+      modalOverlay.classList.remove('modal-overlay--open');
     }
   }
 });

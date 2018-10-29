@@ -565,8 +565,19 @@ input.order-form__input-tel {
 }
 
 @media (min-width: @desktop-width) {
+  .order-form__field-wrapper {
+    width: 100%;
+
+    background-color: #f1f1f1;
+  }
+
   .order-form__field {
+    max-width: 1150px;
+
+    margin: 0 auto;
     padding-left: 225px;
+
+    box-sizing: border-box;
   }
 
   .order-form__field--name,
@@ -585,8 +596,9 @@ input.order-form__input-tel {
   }
 
   .order-form__tip-wrapper {
-    padding-left: 225px;
-    padding-right: 225px;
+    max-width: 700px;
+
+    margin: 0 auto;
   }
 
   .order-form__label--tel,
@@ -610,6 +622,8 @@ input.order-form__input-tel {
     display: flex;
 
     padding-bottom: 48px;
+
+    box-sizing: content-box;
   }
 
   .order-form__field--add label {

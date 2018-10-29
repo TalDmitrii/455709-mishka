@@ -24,10 +24,10 @@
             <span class="visually-hidden">Закрыть меню</span>
           </button>
           <ul class="main-navigation__list site-navigation">
-            <li class="main-navigation__item site-navigation__item">
+            <li class="main-navigation__item">
               <a href="catalog.html">Каталог товаров</a>
             </li>
-            <li class="main-navigation__item site-navigation__item">
+            <li class="main-navigation__item">
               <a href="form.html">Вязание на заказ</a>
             </li>
           </ul>
@@ -50,10 +50,10 @@
             </li>
           </ul>
           <ul class="main-navigation__list news-list">
-            <li class="main-navigation__item news-list__item">
+            <li class="main-navigation__item">
               <a href="#">Новые поступления</a>
             </li>
-            <li class="main-navigation__item news-list__item">
+            <li class="main-navigation__item">
               <a href="#">Распродажа</a>
             </li>
           </ul>
@@ -117,9 +117,13 @@
               </tr>
             </table>
             <picture>
+              <source type="image/webp" media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.webp 1x, img/triple-set-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.webp 1x, img/triple-set-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/triple-set-mobile@1x.webp 1x, img/triple-set-mobile@2x.webp 2x">
+
               <source media="(min-width: 1150px)" srcset="img/triple-set-desktop@1x.jpg 1x, img/triple-set-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/triple-set-tablet@1x.jpg 1x, img/triple-set-tablet@2x.jpg 2x">
-              <img class="promotion__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg" width="260" height="315" alt="Вязаные корзинки">
+              <img class="promotion__image" src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязаные корзинки">
             </picture>
             <div class="promotion__price-wrapper">
               <b class="promotion__price">Цена: 990 руб.</b>
@@ -202,7 +206,7 @@
       <h2 class="visually-hidden">Обратная связь</h2>
       <a class="button feedback__button-write" href="#">Напишите нам</a>
     </section>
-    <div class="page-footer__wrapper">
+    <div class="footer-wrapper">
       <footer class="page-footer">
         <a class="page-footer__logo" href="index.html">
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="102px" height="34px" viewBox="0 0 101.615 34.056" enable-background="new 0 0 101.615 34.056" xml:space="preserve">
